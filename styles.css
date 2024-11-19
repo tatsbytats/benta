@@ -1,0 +1,143 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes full height of the viewport */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Product Section */
+.products {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 200px;        /* Set the width to 200px */
+    height: 200px;       /* Set the height to 200px */
+    object-fit: cover;   /* This ensures the image covers the entire area, cropping it if necessary */
+    border-radius: 8px;  /* Optional: adds rounded corners */
+}
+
+.product h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.product .description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+    min-height: 40px; /* Ensure description space even if it's short */
+}
+
+.product .price {
+    font-size: 1.1rem;
+    color: #f80;
+    margin-bottom: 15px;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.product button:hover {
+    background-color: #444;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
